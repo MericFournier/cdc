@@ -1,0 +1,39 @@
+.socials {
+	$this : &;
+	display: flex;
+	width: 130px;
+	justify-content: space-around;
+	&__social {
+		svg {
+			fill: $white;
+			height: 13px;
+		}
+		&--facebook {
+			svg {	
+				width: 7px;	
+			}
+		}
+		&--twitter {
+			svg {
+				width: 12px;
+			}
+		}
+		&--instagram {
+			svg {
+				width: 15px;
+			}
+		}
+		&--youtube {
+			svg {
+				width: 16px;
+			}
+		}
+	}
+	&--blue {
+		#{$this}__social {
+			svg {
+				fill: $blue;
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@import 'bootstrap';
+// Reset CSS
+@import 'vendors/reset';
+
+// Base
+@import 'base/variables';
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/layout';
+
+// Components
+
+// Modules 
+@import 'components/top';
+@import 'components/slick-div';
+@import 'components/block-discover';
+@import 'components/cta';
+@import 'components/image-cta';
+@import 'components/presentation-block';
+@import 'components/newsletter';
+@import 'components/stickers';
+
+@import 'components/window';
+@import 'components/buttons';
+@import 'components/menu';
+@import 'components/error';
+@import 'components/paragraphes';
+//produits 
+@import 'components/product';
+@import 'components/items';
+// formulaires
+@import 'components/forms/checkbox';
+@import 'components/forms/container';
+@import 'components/forms/input';
+@import 'components/forms/radio';
+@import 'components/forms/table';
+//footer 
+@import 'components/footer';
+@import 'components/arguments';
+@import 'components/green-line';
+@import 'components/footer-list';
+@import 'components/footer-socials';
+@import 'components/copyright';
+@import 'components/card';
+@import 'components/panel';
+//header 
+@import 'components/header'; 
+
+@import 'views/test'; 
+
+

@@ -1,0 +1,21 @@
+.page-transition {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% ,-50%);
+  overflow: hidden;
+  visibility: hidden;
+  &__circle {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $white;
+    transform-origin: center center;
+  }
+}

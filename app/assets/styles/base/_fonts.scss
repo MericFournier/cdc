@@ -1,0 +1,84 @@
+// Fonts
+@font-face {
+   font-family: 'Cormorant Garamond Regular';
+   src: url('../fonts/CormorantGaramond-Regular.eot');
+   src: url('../fonts/CormorantGaramond-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/CormorantGaramond-Regular.woff2') format('woff2'),
+      url('../fonts/CormorantGaramond-Regular.woff') format('woff'),
+      url('../fonts/CormorantGaramond-Regular.ttf') format('truetype'),
+      url('../fonts/CormorantGaramond-Regular.svg#CormorantGaramond-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Cormorant Garamond BoldItalic';
+   src: url('../fonts/CormorantGaramond-BoldItalic.eot');
+   src: url('../fonts/CormorantGaramond-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/CormorantGaramond-BoldItalic.woff2') format('woff2'),
+      url('../fonts/CormorantGaramond-BoldItalic.woff') format('woff'),
+      url('../fonts/CormorantGaramond-BoldItalic.ttf') format('truetype'),
+      url('../fonts/CormorantGaramond-BoldItalic.svg#CormorantGaramond-BoldItalic') format('svg');
+   font-weight: bold;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+   src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+      url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+      url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+   font-family: 'SF UI Text SemiBoldItalic';
+   src: url('../fonts/SFUIText-SemiboldItalic.eot');
+   src: url('../fonts/SFUIText-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SFUIText-SemiboldItalic.woff2') format('woff2'),
+      url('../fonts/SFUIText-SemiboldItalic.woff') format('woff'),
+      url('../fonts/SFUIText-SemiboldItalic.ttf') format('truetype'),
+      url('../fonts/SFUIText-SemiboldItalic.svg#SFUIText-SemiboldItalic') format('svg');
+   font-weight: 600;
+   font-style: italic;
+}
+
+@font-face {
+   font-family: 'SF UI Text Regular';
+   src: url('../fonts/SFUIText-Regular.eot');
+   src: url('../fonts/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SFUIText-Regular.woff2') format('woff2'),
+      url('../fonts/SFUIText-Regular.woff') format('woff'),
+      url('../fonts/SFUIText-Regular.ttf') format('truetype'),
+      url('../fonts/SFUIText-Regular.svg#SFUIText-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+.material-icons {
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+   display: inline-block;
+   line-height: 1;
+   text-transform: none;
+   letter-spacing: normal;
+   word-wrap: normal;
+   white-space: nowrap;
+   direction: ltr;
+
+   /* Support for all WebKit browsers. */
+   -webkit-font-smoothing: antialiased;
+   /* Support for Safari and Chrome. */
+   text-rendering: optimizeLegibility;
+
+   /* Support for Firefox. */
+   -moz-osx-font-smoothing: grayscale;
+
+   /* Support for IE. */
+   font-feature-settings: 'liga';
+}

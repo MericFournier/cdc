@@ -1,0 +1,65 @@
+.table-commandes {
+   margin-top:40px;
+   $this:&;
+   width:100%;
+   &__item {
+      $this:&;
+      width:100%;
+      padding:23px;
+      display:flex;
+      justify-content:center;
+      border:1px solid $grey-text;
+      margin-bottom:10px;
+      color: $grey-text;
+      @extend p;
+
+      &--header {
+         @extend .table-commandes__item;
+         @extend p;
+         color:$black;
+         border:none;
+         margin:0px;
+         font-weight:bold;
+      }
+      &--current {
+         @extend .table-commandes__item;
+         border:1px solid $black;
+         color:$black;
+      }
+   }
+   .item {
+      width:20%;
+      text-align:center;
+   }
+}
+
+@media screen and ( max-width: $small-width) {
+   .table-commandes {
+      $this:&;
+      &__item {
+         $this:&;
+         flex-direction:column;
+         justify-content:space-around;
+         align-items:center;
+         .expedition, .details {
+            display:none;
+         }
+         .item {
+            width:100%;
+            padding:8px;
+         }
+         .details {
+            width:20%;
+         }
+         &--header {
+            color:$black;
+            border:none;
+            margin:0px;
+         }
+         &--current {
+            border:1px solid $black;
+            color:$black;
+         }
+      }  
+   }
+}

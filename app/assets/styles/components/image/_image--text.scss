@@ -1,0 +1,30 @@
+.image--text{
+		
+	position: relative;
+	display: table;
+	
+	&__text__container{
+		display: inline-block;
+		
+		padding: 30px 45px;
+
+		background: $pastel-blue;
+		text-align: center;
+	}
+
+	&__text{
+		display: table-cell;	
+		vertical-align: middle;
+
+		text-align: center;
+
+		h2{
+			font-size: rem(38px);
+		}
+
+		*{
+			color: white;
+		}
+	}
+
+}

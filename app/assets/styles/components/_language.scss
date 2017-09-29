@@ -1,0 +1,33 @@
+.language {
+	$this: &;
+	line-height: 36px;
+	position: relative;
+	cursor: pointer;
+	svg {
+		height: 4px;
+		width: 8px;
+		fill: $white;
+		margin-left: 5px;
+	}
+	&__submenu {
+		display: none;
+		position: absolute;
+		background-color: $blue;
+		left: 50%;
+		transform: translateX(-50%);
+		li {
+			text-align: center;
+			&:not(:last-child) {
+				margin-right: 0 !important;
+			}
+			a {
+				padding: 0px 20px;
+			}
+		}
+	}
+	&:hover {
+		#{$this}__submenu {
+			display: block;
+		}
+	}
+}

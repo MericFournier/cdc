@@ -1,0 +1,64 @@
+<!-- @include ./partials/header.html -->
+<div class="page compte">
+   <div class="container-fluid">
+      <div class="row">
+         <nav class="menu__compte col-sm-6">
+            <p class="menu__header">Jean Vladimir</p>
+            <ul class="compte-menu__menu">
+               <li class="compte-menu__menu-li"><a href="" alt="">Mes infos</a></li>
+               <li class="compte-menu__menu-li"><a href="" alt="">Mes adresses de livraison</a></li>
+               <li class="compte-menu__menu-li is-active"><a href="" alt="">Mes moyens de paiement</a></li>
+               <li class="compte-menu__menu-li"><a href="" alt="">Mes commandes</a></li>
+            </ul>
+         </nav>
+         <div class="form__container col-md-6 col-sm-6">
+            <h2>mes adresses</h2>
+            <form class="form" method="" action="" class="form">
+               <fieldset>
+                  <label class="form__label">
+                     <div class="input__custom input__custom--lineSelect">
+                        <label class="radios__label selected">
+                           <input type="radio" name="type" checked="checked"/>
+                           <span class="lineSelect ">livraison</span>
+                        </label>
+                        <label class="radios__label">
+                           <input type="radio" name="type"/>
+                           <span class="lineSelect "s>facturation</span>
+                        </label>
+                     </div>
+                  </label>
+                  <label class="form__label">
+                     <span class="form__label-text">Adresse *</span>
+                     <input type="text" class="input" name="" id="" placeholder="7 avenue de Moscou">
+                  </label>
+                  <label class="form__label">
+                     <span class="form__label-text">Code Postal *</span>
+                     <input type="number" class="input" name="" id="" placeholder="75016">
+                  </label>
+               </fieldset>
+               <fieldset>
+                  <label class="form__label">
+                     <span class="form__label-text">Pays *</span>
+                     <input type="text" class="input" name="" id="" placeholder="France">
+                  </label>
+                  <label class="form__label">
+                     <span class="form__label-text">Téléphone *</span>
+                     <input type="number" class="input" name="" id="" placeholder="0678787878">
+                  </label>
+                  <label class="form__label">
+                     <span class="form__label-text">Téléphone ( fixe )</span>
+                     <input type="text" class="input" name="" id="" placeholder="+33">
+                  </label>
+                  <label class="form__label">
+                     <span class="form__label-text">Complément d'adresse *</span>
+                     <input type="text" class="input" name="" id="" placeholder="Au fond de l'impasse">
+                  </label>
+               </fieldset>
+
+               <button type="submit" class="button__primary--out">valider</button>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- @include ./partials/footer.html -->

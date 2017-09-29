@@ -1,0 +1,161 @@
+.product-slider {
+  
+	$this: &;
+	padding: 100px 0;
+	text-align: center;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	perspective: 1000;
+
+	@include mobile {
+		padding-bottom: 0;
+	}
+
+	&__categories {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 40px;
+		@extend %fadeInUp-start;
+		transition: all 0.3s ease-in-out 0.6s;
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+ 	&__category {
+		font-family: $din-light;
+		font-size: rem(14px);
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+		color: $blue;
+		margin: 0 35px;
+		cursor: pointer;
+		position: relative;
+		opacity: 0.3;
+		
+		&:after {
+			content: '';
+			display: none;
+			position: absolute;
+			bottom: -5px;
+			width: 100%;
+			height: 1px;
+			background-color: $blue;
+		}
+
+		&--active, &:hover {
+			opacity: 1;
+			&:after {
+				display: block;
+			}
+		}
+
+		@include mobile {
+			&:nth-child(1), &:nth-child(2) {
+				margin-bottom: 34px;
+			}
+		}
+ 	}
+
+	&__products {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		position: relative;
+		width: 100%;
+
+		.flickity-viewport {
+			width: 100%;
+		}
+	}
+
+	.product {
+		opacity: 0;
+		transition: opacity 0.6s ease-in-out;
+		width: 25%;
+		
+		@include mobile {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		&:nth-child(1) {
+			transition-delay: 0.9s;
+		}
+
+		&:nth-child(2) {
+			transition-delay: 1.2s;
+		}
+
+		&:nth-child(3) {
+			transition-delay: 1.5s;
+		}
+
+		&:nth-child(4) {
+			transition-delay: 1.8s;
+		}
+	}
+
+	&.section--is-visible {
+		#{$this}__subline, #{$this}__headline, #{$this}__categories {
+			@extend %fadeInUp-end;
+		}
+
+		.product {
+			opacity: 1;
+		}
+	}
+
+	&__controls {
+		position: absolute;
+		right: 0;
+		
+		ul {
+			display: flex;
+			li:first-child {
+				margin-right: 90px;
+			}
+		}
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	&__slider {
+
+	}
+
+	.icon-arrow-slider {
+		width: 7px;
+		height: 11px;
+		fill: $grey;
+		cursor: pointer;
+	}
+
+	.icon-arrow-slider-mobile {
+		width: 13px;
+		height: 22px;
+		fill: #919191;
+	}
+}
+
+.product-slider__controls-mobile {
+	position: absolute;
+	top: 30%;
+	z-index: 2;
+	display: none;
+	@include mobile {
+		display: block;
+	}
+}
+
+.product-gallery__prev-mobile {
+	left: 0;
+}
+
+.product-gallery__next-mobile {
+	right: 0;
+}

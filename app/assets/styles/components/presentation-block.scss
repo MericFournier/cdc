@@ -1,0 +1,44 @@
+.presentation {
+   $this:&;
+   align-items: center;
+   p {
+      margin:0 auto;
+      line-height:$high-line-height;
+      color:$grey-text;
+      text-align:justify;
+   }
+   &__description {
+      width:70%;
+      margin:0 auto;
+   }
+   .layout_multiple {
+      align-items:center;
+   }
+   &__item {
+      @extend .col-md-6;
+      text-align:center;
+      
+      .img-responsive {
+         margin:auto;
+      }
+   }
+}
+
+@media screen and ( max-width : $small-width ) {
+   .layout_multiple {
+      display:block;
+      
+      .column {
+         width:100%;
+      }
+   }
+   .presentation {
+      $this:&;
+      &__description {
+         width:100%;
+      }
+      &__item {
+         margin:20px auto;
+      }
+   }
+}

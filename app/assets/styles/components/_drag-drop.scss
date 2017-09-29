@@ -1,0 +1,111 @@
+.drag-drop {
+  display: inline-block;
+  position: relative;
+  margin-left: 200px;
+  margin-top: 50px;
+
+	&.drag-intro {
+		position: absolute;
+		left: 35%;
+		top: 55%;
+
+		p {
+			max-width: 100px;
+			text-align: center;
+			padding-top: 10px;
+		}
+	}
+
+	p {
+		font-family: $din-light;
+		color: $blue;
+		font-size: rem(12px);
+		letter-spacing: 0.14rem;
+		text-transform: uppercase;
+		padding-top: 5px;
+	}
+
+	.drag-container {
+		position: relative;
+	}
+  
+  .lower-half {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+  }
+  
+  &__top {
+    position: relative;
+  }
+  
+  &__middle {
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  &__bottom {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    background: #16243f;
+    border-radius: 10px;
+  }
+  
+  &__dot {
+    display: block;
+    margin: 0 auto;
+    width: 2px;
+    height: 2px;
+    background: #BEBDBC;
+    
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
+  
+  &__main {
+    width: 20px;
+    height: 20px;
+		margin: auto;
+    background: #16243f;
+    border-radius: 50%;
+  }
+  
+  &__sonar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #16243f;
+    border-radius: 10px;
+    opacity: 0;
+    transform-origin: center center;
+   
+    &--first {
+      animation: grow-and-fade 3s cubic-bezier(.165, .84, .44, 1) infinite;
+    }
+    
+    &--second {
+      animation: grow-and-fade 3s cubic-bezier(.165, .84, .44, 1) infinite;
+      animation-delay: 1s;
+    }
+  }
+}
+
+// Sonar anim
+@keyframes grow-and-fade {
+  0% { transform: scale(1); }
+  
+  50% { opacity: 0.3; }
+      
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }   
+}
+    

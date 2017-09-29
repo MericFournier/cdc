@@ -1,0 +1,247 @@
+
+.form { 
+   $this:&;
+   margin:20px auto;
+   fieldset:nth-child(even) {
+      margin-bottom:0px !important;
+   }
+   &__connect-form {
+      width:70%;
+   }
+   &__label {
+      $this:&;
+      display:block;
+      padding: 4px;
+      &-text {
+         width:50%;
+         font-family:$avenir;
+         padding-right:15px;
+         line-height:$text-line-height;
+      }
+      &__content {
+         display:flex;
+         align-items:center;
+         justify-content:space-around;
+      }
+      &--magasin {
+         margin:30px 0px;
+         span {
+            display:block;
+         }
+         .form__label-text {
+            width:100%;
+         }
+         .form__label {
+            $this:&;
+            margin:30px auto;
+         }
+         .primary-text {
+            margin-bottom:40px;
+         }
+         .legend {
+            font-style:italic;
+         }
+         .select-input {
+            margin:10px 0px;
+         }
+      }
+   }
+   &__container {
+      $this:&;
+      padding:0px 40px;
+      &--center {
+         @extend .form__container;
+         @extend .col-md-6;
+      }
+   }
+   &__table {
+      $this:&;
+      &--commandes {
+         width:100%;
+      }
+   }
+}
+
+.table-commandes {
+   margin-top:40px;
+   $this:&;
+   width:100%;
+   &__item {
+      $this:&;
+      width:100%;
+      padding:23px;
+      display:flex;
+      justify-content:center;
+      border:1px solid $grey-text;
+      margin-bottom:10px;
+      color: $grey-text;
+      @extend p;
+
+      &--header {
+         @extend .table-commandes__item;
+         @extend p;
+         color:$black;
+         border:none;
+         margin:0px;
+         font-weight:bold;
+      }
+      &--current {
+         @extend .table-commandes__item;
+         border:1px solid $black;
+         color:$black;
+      }
+   }
+   .item {
+      width:20%;
+      text-align:center;
+   }
+}
+.input {
+   $this:&;
+   padding:10px 15px;
+   display:block;
+   width:100%;
+   margin:10px auto;
+   border: 1px solid $input-border;
+   background-color:transparent;
+   border-radius:3px;
+   font-family:$avenir;
+   outline:0px;
+   &__error {
+      $this:&;
+      border:2px solid red;
+      &--text {
+         color:$red;
+         font-size:12px;
+         margin-bottom:10px;
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+   &--primary {
+      text-transform:uppercase;
+   }
+   &__custom {
+      $this:&;
+      padding:10px 0px;
+      width:100%;
+      margin:10px auto;
+      &--radios {
+         $this:&;
+         display:flex;
+
+         &-inline {
+            justify-content:space-around;
+            display:flex;
+         }
+      }
+      &--checkbox-side {
+         display:flex;
+         justify-content: flex-end;
+         .radios__label {
+            width:70%;
+         }
+      }
+      &--lineSelect {
+         display:flex;
+         justify-content:center;
+      }
+   }
+}
+
+.textarea {
+   @extend .input;
+   min-height:300px;
+}
+
+fieldset {
+   margin-bottom:50px;
+}
+@media screen and ( max-width: $small-width) {
+   .form { 
+      $this:&;
+      margin:20px auto;
+      &__label {
+         $this:&;
+         &__content {
+            flex-direction:row;
+         }
+      }
+      &__container {
+         $this:&;
+         padding:0px;
+         margin:auto;
+         &--center {
+            margin-top:50px;
+         }
+      }
+   }
+
+   .input {
+      $this:&;
+      &__custom {
+         $this:&;
+         &--radios {
+            $this:&;
+            display:block;
+            &-inline {
+               display:block
+            }
+         } 
+         &--checkbox-side {
+            display:flex;
+            justify-content:space-around;
+            .radios__label {
+               width:100%;
+               display:flex;
+               .resp {
+                  width:100%;
+               }
+            }
+         } 
+      }
+   }
+
+   .table-commandes {
+      $this:&;
+      &__item {
+         $this:&;
+         width:100%;
+         padding:23px;
+         display:flex;
+         justify-content:space-around;
+         align-items:center;
+         border:1px solid $grey-text;
+         margin-bottom:10px;
+         color: $grey-text;
+
+         .expedition, .details {
+            display:none;
+         }
+         .item {
+            width:100%;
+            padding:8px;
+         }
+         .details {
+            width:20%;
+         }
+         &--header {
+            color:$black;
+            border:none;
+            margin:0px;
+         }
+         &--current {
+            border:1px solid $black;
+            color:$black;
+         }
+      }  
+   }
+}
+
+@media screen and ( max-width : $phone-width ) {
+
+}
+
+
+
+

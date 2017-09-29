@@ -1,0 +1,88 @@
+.input {
+   $this:&;
+   padding:15px;
+   display:block;
+   width:100%;
+   margin:10px auto;
+   border: 1px solid $input-border;
+   background-color:transparent;
+   border-radius:3px;
+   font-family:$avenir;
+   outline:0px;
+   &__error {
+      $this:&;
+      border:2px solid red;
+      &--text {
+         color:$red;
+         font-size:12px;
+         margin-bottom:10px;
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+   &--primary {
+      text-transform:uppercase;
+   }
+   &__custom {
+      $this:&;
+      padding:10px 0px;
+      width:100%;
+      margin:10px auto;
+      &--radios {
+         $this:&;
+         display:flex;
+
+         &-inline {
+            justify-content:space-around;
+            display:flex;
+         }
+      }
+      &--checkbox-side {
+         display:flex;
+         justify-content: flex-end;
+         .radios__label {
+            width:70%;
+         }
+      }
+      &--lineSelect {
+         display:flex;
+         justify-content:center;
+      }
+   }
+}
+
+.textarea {
+   @extend .input;
+   min-height:300px;
+}
+
+fieldset {
+   margin-bottom:50px;
+}
+
+@media screen and ( max-width: $small-width) {
+   .input {
+      $this:&;
+      &__custom {
+         $this:&;
+         &--radios {
+            $this:&;
+            display:block;
+            &-inline {
+               display:block
+            }
+         } 
+         &--checkbox-side {
+            display:flex;
+            justify-content:space-around;
+            .radios__label {
+               width:100%;
+               display:flex;
+               .resp {
+                  width:100%;
+               }
+            }
+         } 
+      }
+   }
+}

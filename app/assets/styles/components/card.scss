@@ -1,0 +1,205 @@
+.card {
+   $this:&;
+   background-color:$menu-mobile-color;
+   &__intro {
+      color:$black;
+      font-weight:bold;
+      float:left;
+   }
+   &__delete {
+      float:right;
+   }
+   &__table {
+      $this:&;
+      margin:30px auto;
+      &__item {
+         display:flex;
+         align-items:center;
+         justify-content:space-between;
+         margin:18px auto;
+         .produit {
+            $this:&;
+            &__image {
+               min-width:64px;
+               min-height:64px;
+               background-color:white;
+            }
+            &__infos {
+               $this:&;
+               display:flex;
+               justify-content:space-between;
+               align-items:center;
+               @extend .col-md-10;
+               padding:0px;
+               margin-left:15px;
+               &__description {
+                  color:$black;
+                  width: 50%;
+               }
+               &__control {
+                  display:flex;
+                  width:45%;
+                  justify-content:space-between;
+                  align-items: center;
+                  $this:&;
+                  @extend p;
+                  color:$green;
+                  &__qnt {
+                     color:$black;
+                  }
+                  &__arrow {
+                     transform: rotate(-90deg);
+                     //display: inline-block;
+                     width: 15px;
+                     transform-origin: center center;
+                  }
+                  &__price {
+                     @extend p;
+                     color:$green;
+                  }
+               }
+            }
+         }
+         &--total {
+            display:flex;
+            justify-content:space-between;
+            margin:18px auto;
+            @extend p;
+            border-top:1px solid $hr-light;
+            padding:13px 0px;
+            margin:0px;
+            $this:&;
+            .item {
+               $this:&;
+               font-size:16px;
+
+               &__total {
+                  @extend .card__intro;
+                  text-transform:uppercase;
+               }
+            }
+            .value {
+               color:$green;
+            }
+         }
+      }
+   }
+   &__total {
+      $this:&;
+      .item {
+         $this:&;
+
+         .item {
+            font-weight:bold;
+         }
+      }
+      .value {
+
+      }
+      &__item {
+
+      }
+   }
+   &__form {
+      $this:&;
+
+      &__item {
+         @extend .col-md-6;
+         .input, .button__primary {
+            margin:10px 0px;
+            width:100%;
+            min-width:0px;
+         }
+         .input {
+            background-color:$white;
+            border:0px;
+            color:$green;
+            text-align:center;
+            padding:15px;
+         }
+         .button__primary {
+            padding:18px;
+         }
+      }
+   }
+}
+
+@media screen and ( max-width: $small-width ) {
+   .card {
+      margin-top:50px;
+      $this:&;
+      &__intro {
+      }
+      &__delete {
+      }
+      &__table {
+         $this:&;
+         &__item {
+            justify-content:center;
+            .produit {
+               $this:&;
+               &__image {
+               }
+               &__infos {
+                  display:block;
+                  $this:&;
+                  &__description {
+                     width:100%;
+                  }
+                  &__control {
+                     padding:10px 0px;
+                     width:50%;
+                     float:right;
+                     justify-content:space-between;
+                     &__qnt {
+                     }
+                     &__arrow {
+                     }
+                     &__price {
+                     }
+                  }
+               }
+            }
+            &--total {
+               $this:&;
+               .item {
+                  $this:&;
+
+                  &__total {
+                  }
+               }
+               .value {
+                  color:$green;
+               }
+            }
+         }
+      }
+      &__total {
+         $this:&;
+         .item {
+            $this:&;
+
+            .item {
+            }
+         }
+         .value {
+
+         }
+         &__item {
+
+         }
+      }
+      &__form {
+         $this:&;
+
+         &__item {
+            .input, .button__primary {
+            }
+            .input {
+            }
+            .button__primary {
+            }
+         }
+      }
+   }
+}

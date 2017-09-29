@@ -1,0 +1,48 @@
+.button {
+   $this:&;
+   border:0px;
+   background-color:transparent;
+
+   &__primary {
+      $this:&;
+      @extend .button;
+      background-color:green;
+      color:white;
+      font-family:$avenir;
+      font-size:14px;
+      padding:15px;
+      width:200px;
+      max-width:100%;
+      margin:0 auto;
+      display:block;
+      margin-top:30px;
+      border-radius:2px;
+      text-transform:uppercase;
+      letter-spacing: 2px;
+
+      &--out {
+         @extend .button__primary;
+         float:right;
+      }
+   }
+}
+
+.cta_light {
+   color:$green;
+   display:block;
+   text-align:center;
+   text-decoration:underline;
+}
+
+@media screen and (max-width: $small-width) {
+   .button {
+      $this:&;
+      &__primary {
+         $this:&;
+         &--out {
+            margin:30px auto;
+            float:inherit;
+         }
+      }
+   }
+}

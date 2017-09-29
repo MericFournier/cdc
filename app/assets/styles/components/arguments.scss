@@ -1,0 +1,30 @@
+
+.arguments {
+   width:100%;
+   display:flex;
+   justify-content:space-around;
+   &__item {
+      display:flex;
+      align-items:center;
+      margin:50px 0px;
+      height:38px;
+      .item__img {
+         width:50px;
+         margin-right:30px;
+      }
+      .item__span {
+         color: $black;
+      }
+      .item__spanList {
+         .item__span {
+            margin:10px 0px;
+         }
+      }
+   } 
+}
+
+@media screen and ( max-width: $extra-small-width) {
+   .arguments {
+      display:block;
+   }
+}

@@ -1,0 +1,203 @@
+.header__menu {
+   $this:&;
+   display:flex;
+   align-items:center;
+   justify-content:space-around;
+   &-mobile {
+      display:none;
+      ul {
+         @extend .header__menu;
+         width:100%;
+         padding:15px 0px;
+         background-color:$menu-mobile-color;
+      }
+   }
+   &-desktop {
+      background-color:$menu-mobile-color;
+      .logo {
+         $this:&;
+         margin:0 auto;
+         position: relative;
+         transform: translateY(-62%);
+         span {
+            width: 120%;
+            transform: translateY(-100%) translateX(-5%);
+            background-color: #FFFFFF;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+         }
+         
+         &__container {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+         }
+      }
+      ul.mainMenu {
+         @extend .header__menu;
+         li {
+            padding: 20px;
+            a {
+               $this:&;
+               padding:0px 10px;
+               font-family:$cormorant;
+               text-transform:uppercase;
+               color:$black;
+
+               &.main {
+                  padding:0px 10px;
+                  font-family:$cormorant;
+                  text-transform:uppercase;
+                  color:$green;
+               }
+            }
+
+         }
+         li.is-active {
+            $this:&;
+            position:relative;
+            a {
+               color:$green;
+            }
+            &:after {
+               content:"";
+               position:absolute;
+               width:100%;
+               height:2px;
+               background-color:$green;
+               bottom:0px;
+               left:0px;
+            }
+         }
+
+      }
+      .header-search {
+         display:flex;
+         flex-direction:row-reverse;
+         color:$green;
+         align-items:center;
+         $this:&;
+         
+         &__input {
+            $this:&;
+            background-color:transparent;
+            border:0px;
+            border-bottom:1px solid $green;
+            width:85px;
+            color:$green;
+            &::-webkit-input-placeholder {
+               color:$green;
+            }
+         }
+         button[type="submit"] {
+            background-color:transparent;
+            border:0px;
+         }
+      }
+   }
+   &-user {
+      margin:20px;
+      float:right;
+      li {
+         margin:0px 10px;
+      }
+   }
+}
+
+.menu-open {
+   $this:&;
+   width:65%;
+   margin: 20px auto;
+   background-color:$menu-mobile-color;
+   position:relative;
+
+   &__container {
+      $this:&;
+      position:absolute;
+      top:0px;
+      left:230px;
+      border-left:1px solid black;
+      padding-left:20px;
+
+      &:first-child {
+         display:block;
+         position:relative;
+         left:0px;
+         border:0px;
+      }
+   }
+   &__menu {
+      $this:&;
+      width:250px;
+      display:block;
+      position:relative;
+      li {
+         $this:&;
+         display:block;
+         padding:10px 0px;
+         margin-bottom:10px;
+         transition:300ms linear all;
+         a.menu-a {
+            font-size:12px;
+            color:$black;
+            text-transform:uppercase;
+            transition:300ms linear all;
+            position:relative;
+            display:block;
+         }
+         a.menu-a:after {
+            content:url(../img/feuille.png);
+            width:10px;
+            height:20px;
+            position:absolute;
+            top: 0px;
+            left:-30px;
+            transition:300ms linear all;
+            display:block;
+            opacity:0;
+            transform:translateY(-50%);
+         }
+         a.menu-a:hover {
+            $this:&;
+            margin-left:30px;
+            transition:300ms linear all;
+
+            &:after {
+               opacity:1;
+               transition:500ms linear all;
+            }
+         }
+
+
+
+      }
+      li > .menu-open__container {
+         position:absolute;
+         display:none;
+      }
+      li:hover > .menu-open__container {
+         position:absolute;
+         display:block;
+      }
+
+   }
+
+
+}
+
+
+@media screen and ( max-width: $small-width ){
+   .header__menu {
+      $this:&;
+      &-mobile {
+         display:flex;
+      }
+      &-desktop {
+         display:none;
+      }
+      &-user {
+         display:none;
+      }
+   }
+}

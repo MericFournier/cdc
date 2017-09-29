@@ -1,0 +1,161 @@
+h1 {
+   color:$black;
+   text-transform:uppercase;
+   font-size:40px;
+   font-family:$cormorant;
+   font-weight:bold;
+   line-height:125%;
+   -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+   font-family:$cormorant;
+   font-size:30px;
+   line-height:37px;
+   color:$green;
+   text-transform:uppercase;
+   text-align:center;
+   font-weight:bold;
+}
+h2.h2-label {
+   @extend h2;
+   color:$black;
+   text-align:center;
+}
+h2.product_primary {
+   color:black;
+   text-transform:capitalize;
+}
+.ordered {
+   position:relative;
+   text-align:left;
+   margin-left:20px;
+   margin-bottom:25px;
+   $this:&;
+   &:before {
+      position:absolute;
+      width:20px;
+      height:20px;
+      top:0;
+      left:0;
+      transform:translateX(-100%);
+   }
+   &_1 {
+      $this:&;
+      @extend .ordered;
+      &:before {
+         content:"1.";
+      }
+   }
+   &_2 {
+      $this:&;
+      @extend .ordered;
+      &:before {
+         content:"2.";
+      }
+   }
+//   margin-left:20px;
+//   ol {
+//      list-style:decimal;
+//      li {
+//         text-align:left;
+//      }
+//   }
+}
+
+
+h3 {
+   color:$green;
+   font-family:$avenir;
+   font-size:$h3-font-size;
+   text-transform:capitalize;
+}
+h3.title_article {
+   @extend p;
+   font-weight:bold;
+   color:$dark !important;
+   margin-bottom:5px;
+}
+h4 {
+
+}
+
+p,a {
+   color:$grey;
+   font-family:$avenir;
+   font-size:$base-font-size;
+   letter-spacing:$letter-spacing;
+   line-height:$text-line-height;
+}
+span {
+  
+}
+p.item-price {
+   font-weight:bold;
+   color:$black;
+}
+
+a {
+   text-decoration:none;
+}
+a:hover {
+   cursor:pointer;
+   text-decoration:none;
+   color:inherit;
+}
+a.button__primary:hover {
+   color:white;
+}
+
+a.forget {
+   margin:15px 0px;
+   font-size:14px;
+   color:$black;
+   text-align:center;
+}
+.primary-title {
+   font-size:25px;
+   color:$black;
+   text-align:center;
+   text-transform:uppercase;
+   position:relative;
+   display:block;
+   margin:20px auto;
+   margin-bottom:40px;
+
+   &:after {
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translateX(-50%) translateY(-50%);
+      content: "";
+      width:50px;
+      height:50px;
+      background-image:url(../img/icone_fleur.png);
+      background-size:cover;
+      background-position:center center;
+      font-family:$cormorant;
+   }
+}
+
+.subtitle {
+   $this:&;
+   
+   &__form {
+      font-size:14px;
+      color:$black;
+      text-transform:uppercase;
+      text-align:center;
+      margin:22px 0px;
+   }
+   &__light-text {
+      font-size:12px;
+      color:$grey-label;
+   }
+}
+
+@media screen and  ( max-width: $small-width) {
+   h1 {
+      font-size:20px;
+   }
+}

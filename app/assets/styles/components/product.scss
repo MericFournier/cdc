@@ -1,0 +1,120 @@
+.product {
+   $this:&;
+   margin-bottom:80px;
+   &--apercu {
+      $this:&;
+      transition:200ms linear all;
+      @extend .col-md-4;
+      margin:0;
+      padding:15px 10px 30px 10px;
+      text-align:center;
+      .button__primary {
+         opacity:0;
+         transition:200ms linear all;
+      }
+      &__price {
+         $this:&;
+         font-weight:bold;
+         font-size:20px;
+         color:$black;
+         margin:20px auto;
+
+         &--promo {
+            @extend .product--apercu__price;
+            width:100%;
+            display:flex;
+            justify-content:space-around;
+            color:$green;
+
+            del {
+               color:$grey;
+               font-weight:normal;
+            }
+         }
+      }
+      img {
+         padding:0px 20px;
+      }
+      &:hover {
+         box-shadow:0px 2px 11px $shadow;
+         transition:200ms linear all;
+
+         .button__primary {
+            opacity:1;
+            transition:200ms linear all;
+         }
+      }
+   }
+   &--thumb {
+      $this:&;
+      text-align:center;
+      padding:20px;
+      transition:200ms linear all;
+      img {
+         margin:0 auto;
+         margin-bottom:20px;
+      }
+      &--slick {
+         @extend .product--thumb;
+         @extend .col-md-3;
+      }
+      &--suggest {
+         @extend .product--thumb;
+         width:20%;
+      }
+      &:hover {
+         box-shadow:0px 2px 11px $shadow;
+         transition:200ms linear all;
+      }
+   }
+   &__categorieDescription {
+      text-align:center;
+      @extend .container;
+      h3, h4 {
+         @extend p;
+         color:$black;
+         font-weight:bold;
+         font-size:15px;
+         margin-bottom:20px;
+      }
+      p:first-child {
+         font-weight:bold;
+         padding:20px auto;
+      }
+   }
+}
+@media screen and ( max-width : $small-width ) {
+   .product {
+      $this:&;
+      &--apercu {
+         $this:&;
+         &__price {
+            $this:&;
+            &--promo {
+               flex-direction:column;
+               justify-content:center;
+               color:$green;
+               del {
+                  margin:5px 0px;
+               }
+            }
+         }
+         &:hover {
+            box-shadow:none;
+            transition:200ms linear all;
+            .button__primary {
+               opacity:0;
+            }
+         }
+      }
+      &--thumb {
+         $this:&;
+         &--suggest {
+            width:100% !important;
+         }
+         &:hover {
+            box-shadow:none;
+         }
+      }
+   }
+}

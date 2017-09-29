@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------------ */
+/*        MINI-SLIDER
+/* ------------------------------------------------------------------ */
+
+.mini-slider{
+
+	&__container{
+
+		height: 200px;
+		position: relative;
+		overflow : hidden;
+		cursor: pointer;
+	}
+
+	ul{
+		position : absolute;
+		top : 0;
+		left : 0;
+		right : 0;
+		bottom : 0;
+	}
+	
+	&__item{
+
+		height: 100%;
+		width: 100%;
+		overflow : hidden;
+		position: absolute;
+		top : 0;
+		left : 0;
+		right : 0;
+		bottom : 0;
+		display: block;
+		z-index: 0;
+
+		&.active{
+			z-index: 2;
+		}
+
+		&.next{
+			z-index: 3;
+		}
+
+		&.previous{
+			z-index: 1;
+		}
+
+		&__image{
+
+			background-size : cover;
+			background-position : center;
+			height: 100%;
+			width: 200px;
+
+	        transition-duration: 0.4s;
+
+		}	
+	}
+
+	&__nav{
+		
+		p{
+			line-height: 30px;
+			text-align: right;
+			margin-right: 70px;
+		}
+
+		&__arrow{
+			
+			float: right;
+
+			width : 30px;
+			height: 30px;
+
+			border-top: 1px solid $black; 
+			border-bottom: 1px solid $black; 
+
+			cursor: pointer;
+			transition : 0.3s;
+
+			&:hover{
+
+				background-color : $black;
+
+				svg{
+					fill : $white;
+				}
+
+			}
+
+			svg{
+				
+				margin-top: 6px;
+				margin-left : 5px;
+				width : 17px;
+				transition : 0.3s;
+				
+			}
+
+			&--left{
+
+				@extend .mini-slider__nav__arrow;
+				border-left: 1px solid $black; 
+
+			}
+
+			&--right{
+
+				@extend .mini-slider__nav__arrow;
+				border-right: 1px solid $black; 
+				border-left : 1px solid $black; 
+
+			}
+
+
+		}
+
+	}
+
+}

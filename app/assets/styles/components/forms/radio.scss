@@ -1,0 +1,133 @@
+.radios {
+   &__label {
+      $this:&;
+      margin:10px 0px;
+      margin-right:10px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      span {
+         $this:&;
+         display:inline-block;
+         vertical-align:middle;
+         font-family:$avenir;
+         min-width: 20px;
+         margin-left: 5px;
+         text-transform:capitalize;
+         line-height:150%;
+      }
+      span.selected {
+         text-decoration:underline;
+         color:$green;
+      }
+      input {
+         position: absolute;
+         z-index: -1;
+         opacity: 0;
+      }
+
+      &:hover {
+         cursor:pointer;
+      }
+      &--filter {
+         @extend .radios__label;
+      }
+   }
+   &__element {
+      $this:&;
+      width: 20px;
+      height: 20px;
+      border:2px solid $green;
+      border-radius:50%;
+      margin:0px 5px;
+      min-width: 20px;
+      margin-left: 5px;
+      position:relative;
+      @extend span;
+      &:hover {
+         $this:&;
+         cursor:pointer;
+      }
+      &:after {
+         display:block;
+         width:10px;
+         height:10px;
+         transition:200ms linear all;
+      }
+      &--product {
+         $this:&;
+         width:10px;
+         height:10px;
+         border:2px solid $grey;
+         position:relative;
+
+         &:after {
+            content: "";
+            width:10px;
+            height:10px;
+            background-color:black;
+            position:absolute;
+            top:-2px;
+            left:-2px;
+            display:none;
+         }
+      }
+
+
+      &:after {
+         content:"";
+         width:13px;
+         height:13px;
+         background-color:$green;
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translateY(-50%) translateX(-50%);
+         border-radius:50%;
+         display:none;
+         transition:200ms linear all;
+      }
+   }
+   &:hover {
+      cursor:pointer;
+   }
+}
+/* quand radio = checked */
+.radios__label { 
+   input:checked ~ .radios__element:after  {
+      display:block;
+   }
+   input:checked ~ .radios__element--product:after  {
+      display:block;
+   }
+   input:checked ~ span.filterTag  {
+      font-weight:bold;
+   }
+   input:checked ~ span.lineSelect  {
+      color:$green;
+      text-decoration:underline;
+   }
+}
+
+@media screen and ( max-width:$small-width ) {
+   .radios {
+      $this:&;
+      &__label {
+         $this:&;
+         display:block;
+         width: 100%;
+
+         .resp {
+            display:inline-block;
+            width:80%;
+            margin-left:10px;
+         }
+         &--filter {
+            display:flex;
+         }
+      }
+      &__element {
+         display:inline-block;
+      }
+   }
+}

@@ -1,0 +1,38 @@
+.search {
+
+	$input-width: 115px;
+
+	display: flex;
+	svg {
+		height: 36px;
+		width: 9px;
+		fill: $white;
+		margin-right: 5px;
+		cursor: pointer;
+	}
+	input {
+		height: 36px;
+		background-color: $blue;
+		border: none;
+		color: $white;
+		text-transform: uppercase;
+		font-size: rem(8px);
+		line-height: rem(36px);
+		letter-spacing: 0.17rem;
+		width: 0px;
+		padding: 0 5px;
+		border-right: 1px solid #3d5782;
+		transition: width 0.3s ease-in-out 0.3s;
+		@include placeholder {
+			color: $white;
+		}
+		&:focus {
+			width: $input-width;
+		}
+	}
+	&:hover, &:focus {
+		input {
+			width: $input-width;
+		}
+	}
+}

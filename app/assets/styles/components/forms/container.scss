@@ -1,0 +1,89 @@
+.form { 
+   $this:&;
+   margin:20px auto;
+   fieldset:nth-child(even) {
+      margin-bottom:0px !important;
+   }
+   &__connect-form {
+      width:70%;
+   }
+   &__label {
+      $this:&;
+      display:block;
+      padding: 4px;
+      &-text {
+         $this:&;
+         width:50%;
+         font-family:$avenir;
+         padding-right:15px;
+         line-height:$text-line-height;
+         
+         &--adresse {
+            @extend .form__label-text;
+            color:$grey-paragraph;
+         }
+      }
+      &__content {
+         display:flex;
+         align-items:center;
+         justify-content:space-around;
+      }
+      &--magasin {
+         margin:30px 0px;
+         span {
+            display:block;
+         }
+         .form__label-text {
+            width:100%;
+         }
+         .form__label {
+            $this:&;
+            margin:30px auto;
+         }
+         .primary-text {
+            margin-bottom:40px;
+         }
+         .legend {
+            font-style:italic;
+         }
+         .select-input {
+            margin:10px 0px;
+         }
+      }
+   }
+   &__container {
+      $this:&;
+      padding:0px 40px;
+      &--center {
+         @extend .form__container;
+         @extend .col-md-6;
+      }
+   }
+   &__table {
+      $this:&;
+      &--commandes {
+         width:100%;
+      }
+   }
+}
+
+@media screen and ( max-width: $small-width) {
+   .form { 
+      $this:&;
+      margin:20px auto;
+      &__label {
+         $this:&;
+         &__content {
+            flex-direction:row;
+         }
+      }
+      &__container {
+         $this:&;
+         padding:0px;
+         margin:auto;
+         &--center {
+            margin-top:50px;
+         }
+      }
+   }
+}

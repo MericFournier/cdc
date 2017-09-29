@@ -1,0 +1,135 @@
+.sticker {
+   $this:&;
+   width:100%;
+   position:relative;
+   &__flower {
+      $this:&;
+      .item {
+         $this:&;
+         &__flower {
+            $this:&;
+            background:url(../img/fleur.png);
+            background-size:contain;
+            background-repeat:no-repeat;
+            position:absolute;
+            z-index:999;
+            &--nouveaute {
+               @extend .item__flower;
+               transform:translateX(-100%) translateY(-100%);
+               width:98px;
+               height:103px;
+               position:absolute;
+            }
+            &--exclusivite {
+               @extend .item__flower;
+               width:115px;
+               height:211px;
+               position:absolute;
+               right:0px;
+               transform: translateY(-100%) translateX(100%) rotate(-180deg);
+            }
+            &--cta {
+               @extend .item__flower;
+               width:175px;
+               height:108px;
+               position:absolute;
+               left:0px;
+               transform:translateX(-100%) rotate(-100deg);
+            }
+            &--discoverInverse {
+               @extend .item__flower;
+               width: 97px;
+               height: 175px;
+               position:absolute;
+               transform: translateY(-50%) translateX(-100%) rotate(-45deg);
+            }
+            &--presentation {
+               @extend .item__flower;
+               width: 55px;
+               height: 110px;
+               position: absolute;
+               right: 0px;
+               transform: translateY(-50%) translateX(50%) rotate(180deg);
+            }
+            &--newsletter {
+               @extend .item__flower;
+               width: 152px;
+               height: 273px;
+               position: absolute;
+               transform: translateY(0%) translateX(-50%) rotate(-110deg);
+            }
+         }
+      }
+      &--right {
+         float:right;
+         position:absolute;
+         right:0px;
+      }
+      &--left {
+         float:left;
+         position:absolute;
+         left:0px;
+      }
+      &--nouveaute {
+         transform:translateX(-50%) translateY(-50%);
+      }
+      &--exclusivite {
+         position:absolute;
+         right:0px;
+         transform: translateY(-100%) rotate(-16deg);
+      }
+      &--cta {
+         float:left;
+         position:absolute;
+         left:0px;
+         transform:rotate(-16deg) translateX(-100%);
+      }
+      &--discoverInverse {
+         transform: translateY(-100%);
+      }
+      &--presentation {
+         width:50px;
+         position:absolute;
+         right:0px;
+         transform: translateY(-50%) translateX(100%);
+      }
+      &--newsletter {
+         transform: translateY(100%) translateX(-50%);
+      }
+   }
+   &__window {
+      $this:&;
+      &--compte1 {
+         position:absolute;
+         top:0px;
+         left:63px;
+         width:100px;
+         transform:translateY(-50%);
+      }
+      &--compte2 {
+         position: absolute;
+         top: 100px;
+         right: -29px;
+         width: 100px;
+         transform: rotate(280deg);
+      }
+   }
+   .container {
+      margin:0 auto;
+   }
+}
+
+
+@media screen and ( max-width: $small-width ) {
+   .sticker {
+      $this:&;
+      &__flower {
+         display:none;
+      }
+      &__window {
+         display:none;
+      }
+
+   }
+}
+

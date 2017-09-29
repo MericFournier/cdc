@@ -1,0 +1,23 @@
+.article {
+   $this:&;
+   &__main {
+      p {
+         text-align:justify;
+         line-height:$high-line-height;
+      }
+      
+      h3 {
+         text-align:left !important;
+      }
+      strong {
+         font-weight:bold;
+         color:$dark;
+      }
+   }
+}
+
+.container-paragraphe {
+   @extend .col-md-6;
+   @extend .center-block;
+   margin:40px auto;
+}

@@ -1,0 +1,30 @@
+.label-cta {
+   width:227px;
+   text-align:center;
+   color:$grey;
+   display:block;
+   text-transform:uppercase;
+   background-color:white;
+   margin: 0 auto;
+   font-family: $cormorant;
+   font-size:18px;
+   padding:10px 0px;
+   font-weight:normal;
+}
+
+.cta-primary {
+   width:70%;
+   margin:20px auto;
+   padding:10px;
+   display:block;
+   background-color:white;
+   color:$green;
+   text-transform:uppercase;
+   letter-spacing:1.8px;
+}
+
+.cta_light {
+   color:$green;
+   display:block;
+   text-align:center;
+}

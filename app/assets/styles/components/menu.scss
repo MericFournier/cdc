@@ -1,0 +1,141 @@
+.menu {
+   $this:&;
+
+   &__compte {
+      @extend .col-md-3;
+      padding:0px;
+      ul {
+         width:100%;
+
+         li {
+            margin:10px 0px;
+         }
+         li.is-active {
+            a {
+               font-weight:bold;
+               color:$black;
+            }
+         }
+      }
+   }
+   &__header {
+      @extend h2;
+      font-size:17px;
+      text-align:left;
+      font-family:$avenir;
+   }
+   &__filter {
+      $this:&;
+      .filters {
+         display:block;
+
+         .button__primary {
+            display:none;
+         }
+      }
+
+      &__primary-title {
+         @extend p;
+         font-family:$cormorant;
+         font-weight:bold;
+         color:$black;
+         text-transform:uppercase;
+      }
+
+      &__context {
+         display:flex;
+         justify-content:space-between;
+         align-items: center;
+      }
+
+      &__secondary-title {
+         $this:&;
+         @extend .menu__filter__primary-title;
+         font-family:$avenir;
+         display:flex;
+         align-items:center;
+         span {
+            color:$green;
+            font-weight:bold;
+            font-size:30px;
+            display:block;
+         }
+         &--price {
+            display:none;
+         }
+      }
+
+      &__nav {
+
+         $this:&;
+         margin:20px auto;
+         ul {
+            display:flex;
+            flex-direction:column;
+         }
+         li {
+            margin:10px 0px;
+            a {
+               @extend p;
+               color:$black;
+            }
+            a.is-active {
+               color:$green;
+               text-decoration:underline;
+            }
+            label {
+               margin:0px;
+            }
+         }
+         &__title {
+            @extend p;
+            color:$black;
+            font-size:12px;
+            text-transform:uppercase;
+            font-weight:bold;
+         }
+      }
+   }
+}
+
+@media screen and ( max-width : $small-width) {
+   .menu {
+      $this:&;
+      &__compte {
+         margin-bottom:50px;
+      }
+      &__filter {
+         display:flex;
+         flex-direction:column-reverse;
+         $this:&;
+
+         .filters {
+            display:block;
+
+            .button__primary {
+               display:block;
+            }
+         }
+
+         &__secondary-title {
+            $this:&;
+            &--price {
+               display:block;
+            }
+         }
+
+         &__nav {
+            $this:&;
+            ul {
+               display:flex;
+               flex-direction:row;
+               flex-wrap:wrap;
+            }
+            li {
+               width:50%;
+               padding:0px 10px 0px 0px;
+            }
+         }
+      }
+   }
+}

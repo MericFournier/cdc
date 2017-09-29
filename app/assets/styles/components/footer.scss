@@ -1,0 +1,9 @@
+.footer_main {
+   display:flex;
+}
+
+@media screen and ( max-width: $small-width) {
+   .footer_main {
+      display:block;
+   }
+}
